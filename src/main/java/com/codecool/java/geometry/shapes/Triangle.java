@@ -49,4 +49,12 @@ public class Triangle extends Shape {
     public float getC(){
         return c;
     }
+
+    public String getNameClass(){
+        return "Triangle";
+    }
+
+    public String toString(){
+        return String.format("Triangle, a = %f, b = %f, c=%f", a, b, c);
+    }
 }

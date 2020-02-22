@@ -12,4 +12,8 @@ public class EquilateralTriangle extends Triangle {
         return a;
     }
 
+    public String toString(){
+        return String.format("Equilateral Triangle, a = %f", a);
+    }
+
 }

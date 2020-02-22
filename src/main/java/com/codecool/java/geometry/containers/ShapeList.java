@@ -25,11 +25,37 @@ public class ShapeList implements Printable {
     }
 
     public void printList(){
-
+        System.out.println(getShapesTable());
     }
     
     public void printTable(){
+        CommandLineTable st = new CommandLineTable();
 
+        st.setShowVerticalLines(true);
+        st.setHeaders("idx", "Class", "toString", "Perimeter", "Formula", "Area", "Formula");
+        
+        for(int idx = 0; idx < shapes.size();idx++){
+            String className = shapes.get(idx).getNameClass();
+            String toString = shapes.get(idx).toString();
+            double perimeterValue = shapes.get(idx).calculatePerimeter();
+            String perimeterFormula = shapes.get(idx).getPerimeterFormula();
+            double areaValue = shapes.get(idx).calculateArea();
+            String areaFormula = shapes.get(idx).getAreaFormula();
+            String idxAsString = String.format("%d", idx);
+            String perimeterValueAsString = String.format("%f", perimeterValue);
+            String areaValueAsString = String.format("%f", areaValue);
+            st.addRow(idxAsString, className, toString, perimeterValueAsString, perimeterFormula, areaValueAsString, areaFormula);
+
+        }
+        st.print();
+    }
+
+    public String getShapesTable(){
+        String listAsString = "";
+        for(Shape shape : shapes){
+            listAsString += shape.toString() + "\n";
+        }
+        return listAsString;
     }
 
     public Shape getLargestShapeByPerimeter(){

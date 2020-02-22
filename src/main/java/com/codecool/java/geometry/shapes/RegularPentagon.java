@@ -31,4 +31,12 @@ public class RegularPentagon extends Shape {
     public float getA(){
         return a;
     }
+
+    public String getNameClass(){
+        return "Regular Pentagon";
+    }
+
+    public String toString(){
+        return String.format("Rectangle, a = %f", a);
+    }
 }

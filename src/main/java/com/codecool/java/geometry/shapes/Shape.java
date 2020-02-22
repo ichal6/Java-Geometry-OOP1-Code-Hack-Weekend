@@ -37,6 +37,10 @@ public abstract class Shape {
      * @param args
      * @return true if any of args are greater than 0
      */
+
+    public abstract String getNameClass();
+
+    
     public static boolean checkIfArgsGreaterThanZero(float... args) {
         throw new NotYetImplementedException();
     }

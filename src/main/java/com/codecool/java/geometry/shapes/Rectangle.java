@@ -38,4 +38,12 @@ public class Rectangle extends Shape {
     public float getB(){
         return b;
     }
+
+    public String toString(){
+        return String.format("Rectangle, a = %f, b = %f", a, b);
+    }
+
+    public String getNameClass(){
+        return "Rectangle";
+    }
 }

@@ -32,4 +32,12 @@ public class Circle extends Shape {
     public float getR(){
         return r;
     }
+
+    public String getNameClass(){
+        return "Circle";
+    }
+
+    public String toString(){
+        return String.format("Circle, r = %f", r);
+    }
 }
